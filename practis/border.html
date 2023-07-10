@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <style>
+        *{box-sizing: border-box;float: left;}
+        div
+        {
+            height: 100px;width: 150px;
+            margin:  20px auto;
+        }
+        .x
+        {
+            background:rgba(223, 85, 22,.6);
+            border-radius:10px 20px ;
+            box-shadow: 5px 5px 1px blue;
+        }
+        .y
+        {
+            background:rgba(223, 191, 13,.2);
+            border-radius: 100px 100px;
+            box-shadow: -5px -5px 10px rgb(243, 134, 10),5px 5px 1px blue;
+        }
+        .z
+        {
+            background:rgba(65, 14, 158,.3);
+            border-radius: 50% 50%; 
+            box-shadow: 5px -5px 15px rgb(223, 5, 5) inset;
+        }
+        .a
+        {
+            background:rgba(28, 179, 86,.9);
+            border-radius: 70% 30%;
+            box-shadow: -5px 5px 3px rgb(224, 17, 179) outset;
+        }
+        .b
+        {
+            background:rgba(234, 238, 4,.8);
+            border-radius:11px 110px 10px 11px; 
+            box-shadow: 5px -5px 3px rgb(16, 208, 233),-5px 5px 3px rgb(224, 17, 179) outset;
+        }
+
+        
+    </style>
+</head>
+<body>
+     <div class="x" style="border:solid 2px red ;"> solid</div>
+     <div class="y" style="border:darkblue 2px dotted ; padding: 10px;">dotted</div>
+     <div class="z" style="border:2px rgb(28, 179, 86)  dashed; padding: 10px;"> dashed</div>
+     <div class="a" style="border: 2px rgb(65, 14, 158) double;padding: 12px;">double</div>
+     <div class="b" style="border: 2px rgb(206, 16, 165) groove;">groove</div>
+     <div class="x y" style="border:2px rgb(223, 85, 22) ridge ;padding: 10px">ridge</div>
+     <div class="y z" style="border:2px rgba(50, 12, 221, 0.356) inset ; padding: 12px;">inset</div>
+     <div class="a b" style="border:2px rgb(223, 191, 13)  outset;padding: 10px;">outset</div>
+     <div  style="background: lightgreen; padding: 5px; overflow:hidden; border-radius: 50% 50%;height: 100px;width: 100px;" ><div style="border: 3px gray solid; transform:rotate(90deg);border-radius: 50%;"></div></div>
+   
+</body>
+</html>

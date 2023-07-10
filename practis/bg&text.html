@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>bg&text</title>
+    <style>
+        *{float: left;}
+    
+        div
+        {
+              height: 400px ;width: 500px;
+              background: linear-gradient(rgba(0,25,245,.7),rgba(25,25,28,.7)), url(images.jpg); 
+              background-size: 100% 100% , 50% 50%;
+              background-repeat: no-repeat,no-repeat;
+              background-position: center,center; 
+             margin: 0px;
+             padding: 100px 0px;
+             box-sizing: border-box;
+             overflow: hidden;
+             overflow: scroll;
+              border-color:rgb(2, 2, 2);
+           
+        }            
+                                  
+        pre
+        {
+             height: 100px; width: 100px; 
+            background:red;
+            background-size: 50px 100px; 
+            color: black;
+          
+           overflow: hidden;  
+           overflow: scroll;
+          overflow: auto;  
+
+       
+        -webkit-background-clip:text; 
+                  font-size: xx-large;
+           
+           
+        
+        }
+        .x{
+           
+            background:url(IMAGE_1682176578.jpg);
+    
+            color: transparent;
+          -webkit-background-clip: text;
+      
+        }
+        .y
+        {
+            letter-spacing: 3px;
+            text-shadow: 3px 2px 0px black;
+            color: red;
+        }
+        .filter
+        {
+            height: 300px;width: 500px;
+            background: black;
+            /* filter: brightness(50%); */
+            /* filter:contrass(10%); */
+            /* filter:saturate(10%);
+            /* filter:hue-rotate(10%); */
+            filter:grayscale(0%); 
+            /* filter:invert(100 px); */
+            filter: drop-shadow(0 0 15px blue);
+        }
+       
+    
+    </style>
+</head>
+<body>
+
+    <span class="filter">
+        <img src="71043312.webp" alt="ghar bhegu tha">
+    </span>
+    <div> 
+            <h1 style="color:whitesmoke;letter-spacing: 2px;" >M.S.Univesity</h1>
+            <h2 style="text-decoration: overline;"> baroda</h2>
+            <h2 style="text-decoration: line-through; text-indent: 50px;" > baroda</h2>
+            <h2 style="text-orientation: sideways; writing-mode: vertical-lr;font-size: x-large;"> 1234</h2>
+            <h2 style="text-orientation: upright; writing-mode: vertical-lr;font-size: larger;"> 1234</h2>
+            <h3 style="font-family:'Courier New', Courier, monospace;line-height: 30px; font-style: italic;text-indent: 12rem; text-transform: uppercase;word-spacing: 5px;"> Lorem, <span style="font-weight:lighter;"> ipsum</span> dolor sit amet consectetur adipisicing elit. Nobis libero temporibus facilis asperiores harum quae corrupti fuga beatae et ab natus ad aperiam, numquam quia placeat ipsa dolore velit hic?</h3>
+    </div>
+
+    <pre style="border: 5px solid red;">
+       
+          libero earum quasi nobis atque quaerat a reprehenderit unde voluptas vitae assumenda facilis esse vero volupta
+          tum ex!
+    </pre>
+
+    <h1 class="x"> bold</h1>
+    <h2 class="y">hlw</h2>
+  
+</body>
+</html>

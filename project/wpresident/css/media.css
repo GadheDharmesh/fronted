@@ -1,0 +1,9 @@
+@media(max-width:1250px)
+{
+    .header .menu{display:none;}
+    .header .topbar{display: none;}
+    .header .mainbar{display: flex;}
+    .header .downmenu .dm .submenu{grid-template-columns: 1fr;}
+}
+
+

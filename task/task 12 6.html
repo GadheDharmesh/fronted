@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>framework</title>
+    <style>
+       
+        .a
+        {    margin: auto;
+            height: 100px;width: 300px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            font-family: fantasy;
+            letter-spacing: 20px;
+            align-items: center;
+           background: white;
+            position: relative;
+            background: ;
+        } 
+
+         .a::after
+        {
+            content: " ";
+            height: 20px;width: 20px;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            /* border: 5px solid transparent; */
+            border-top: 5px solid red;
+            border-right: 5px solid red;
+        }
+        .a::before
+        {
+            content: " ";
+            height: 20px;width: 20px;
+            position: absolute;
+            bottom: 0%;
+           left: 0%;
+            /* border: 5px solid transparent; */
+            border-bottom: 5px solid red;
+            border-left: 5px solid red;
+        } 
+
+
+    </style>
+</head>
+<body>
+    <div class="a"> VIVEK</div>
+</body>
+</html>

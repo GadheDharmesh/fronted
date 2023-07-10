@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anim task 2</title>
+    <style>
+        .face
+        {
+            margin: auto;
+            height: 500px;
+            width: 500px;
+            background-color:yellow;
+            border-radius: 50%;
+            /* overflow: hidden; */
+            position: relative;
+        }
+
+        .eyebrows
+        {
+            height: 25px;
+            width: 160px;
+            background: rgb(156, 112, 96);
+            clip-path: polygon(0% 100%,60% 50%,100% 100%,60% 0%);
+            position:absolute ;
+            top: 150px;
+            animation: movment 2s linear infinite ;
+        }
+
+        .eye
+        {
+            height: 150px;
+            width: 130px;   
+            background: rgb(249, 246, 246);
+            border-radius: 50%;
+           position: absolute ;
+           overflow: hidden;
+            top: 200px;
+        }
+
+        .eyep
+        {
+            height: 150px;
+            width: 130px;   
+            background: rgb(147, 8, 124);
+            border-radius: 50%;
+           position:inherit;
+            /* top: -150px; */
+            left: 0;
+            /* opacity: .5; */
+            animation: eyep 6s linear  infinite;
+            z-index: 2;
+          
+        }
+
+        .eyeball
+        {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: rgb(67, 149, 177);
+            border-radius: 50%;
+            top: 20px;
+            left: 20px;
+            animation: eyeball 2s infinite linear reverse; 
+            z-index: 1;
+        }
+        .eyelence
+        {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background:black;
+            border-radius: 50%;
+            top: 15px;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .smile
+        {
+            height: 50px;
+            width: 360px;
+            position: absolute;
+            background: rgb(250, 13, 13);
+            clip-path:ellipse(120px 10px);
+            top: 375px;
+            left: 70px;
+        }
+
+        .one
+        {
+          left: 80px;
+        }
+        .two
+        {
+            right:80px
+        }
+
+        @keyframes movment
+        {
+            0%{top: 150px;}
+            50%{top: 100px;}
+        }
+        @keyframes eyep
+        {
+            0%{top: 0px;}
+            33.33%{top: -130px;}
+            66.66%{top: -130px;}
+            100%{top: 0px;}
+        }
+        @keyframes eyeball
+        {
+            0%{  top: 50px;
+                 left: 20px;
+              }
+          
+            50%{  top: 50px;
+                  left: 80px;
+                }
+          
+            100%{
+                   top: 50px;
+                   left: 20px;
+               }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="eyebrows one"></div>
+        <div class="eyebrows two"></div>
+        <div class="eye one">
+            <div class="eyep ">  </div>
+                <div class="eyeball ">
+                    <div class="eyelence"></div>
+              
+            </div>
+        </div>
+        <div class="eye two">
+            <div class="eyep "> </div>
+                <div class="eyeball ">
+                    <div class="eyelence"></div>
+               
+            </div>
+        </div>
+        <div class="smile"></div>
+    </div>
+</body>
+</html>

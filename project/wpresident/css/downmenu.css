@@ -1,0 +1,53 @@
+
+.downmenu
+{
+    margin: auto;
+    column-gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+    position: relative;
+    
+}
+
+.downmenu .dm
+{
+   color: white;
+   height: 40px;
+   width: 80px;
+   padding: 5px;
+   border: none;
+   background: blue;
+  
+}
+.submenu
+{
+    width: 60%;
+    display: grid;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    background: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    column-gap: 3px;
+    display: grid;
+    padding: 40px;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.Rentals .submenu{ grid-template-columns: repeat(5,2fr); visibility: visible;}
+.Sales .submenu{ grid-template-columns: 1fr 1fr 2fr 1fr;}
+.Invest .submenu{ grid-template-columns: repeat(5,2fr);} 
+.submenu select{color: gray;border:none;box-shadow:0 0 5 yellow;}
+.submenu .search{background: blue; width: 100px;text-align: center;padding: 10px;}
+.submenu input{border: none;text-align:center;}
+.submenu input:focus,.submenu select:focus{outline: none;}
+
+.downmenu .dm:hover .submenu{visibility:visible;}
+.downmenu .dm:hover{background: white;color: black;}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo selectors</title>
+    <style>
+
+        div:first-of-type
+            {height: 300px;width: 100%;
+                border: 5px solid;
+                border-image:linear-gradient(red,black);
+                border-image-slice: 1;
+            }
+        ::selection{background: black;
+        color: antiquewhite;}
+        .x:hover
+            {background: url(IMAGE_1682176578.jpg);
+             background-size: 300px 100%;
+            background-repeat: no-repeat;}
+        :focus
+            {outline: 0px; background: rgb(236, 10, 10);color: rgb(32, 224, 64);}
+        h1:first-child::first-letter
+             {background-color: red;
+               color: blue;}
+        h1:last-child:
+             {content: "&2625";
+                background: blueviolet;
+             color: brown;
+            }
+        h1:nth-child(3)
+             {background-color: rgb(209, 24, 184);}
+        .y:visited
+            {background-color: aqua;
+                color: rgb(158, 228, 29);}
+      
+        p::after{content: ' \00A7';}
+        p::before{content: "\00A7";}
+
+         .style
+         { height: 50px;width: 100px;
+            background: red;
+            border: 0px blue solid;
+            border-radius: 10px;
+            box-shadow: 3px 3px 0px blue , 4px 4px 0px yellow, 5px 5px 0px black;
+            margin: auto;
+            text-align: center;
+            line-height: 25px;
+            overflow: hidden;  
+            position: relative;
+
+         } 
+
+         .effect
+         {
+            height: 50px;width: 100px;
+           clip-path: polygon(80% 0%,100% 0%,90% 100%,70% 100%);
+           background-color: rgba(226, 222, 222,.8);
+             position: absolute;
+           top: -1%;
+           left: -200%;
+           transition: 1.5s;
+         }
+
+         .style:hover .effect
+            {
+                top:-5%;
+                left: 100%;
+            } 
+
+    </style>
+</head>
+<body>
+    
+    <div class="x">
+        <h1> hello</h1> 
+        <h1>mister </h1>
+        <h1> d</h1>
+        <h1>8918</h1>
+    </div>
+   <div style="visibility: hidden;" class="x">chear</div> 
+   <div style="opacity: 0.5; ;">chear</div>
+   <div style="display: none;"class="x">chear</div> 
+    <p class="y"><a href="border.html" target="_blank">border</a></p>
+    <pre ><input type="text">kam kr </pre>
+
+    <div class="style ">
+    <div class="effect"></div> hover me</div>
+</body>
+</html>

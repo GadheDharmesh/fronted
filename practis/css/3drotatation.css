@@ -1,0 +1,49 @@
+
+.main
+{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    position: relative;
+    transition: 4s;
+    transform-style: preserve-3d; 
+   
+}
+
+.front,.back,.up,.down
+{
+    
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    transform: rotatex(0deg) translateZ(50px);
+    backface-visibility: hidden;
+}
+
+.up
+{
+    background: yellow;
+    transform: rotatex(90deg) translateZ(50px);
+}
+
+.back
+{
+    background: blue;
+    transform: rotatex(180deg) translateZ(50px);
+}
+
+.down
+{
+    background:green;
+    transform: rotatex(270deg) translateZ(50px);
+}
+
+.main:hover 
+{   
+    /* background: cyan; */
+    transform: rotatex(270deg) translateZ(0px);
+}
+

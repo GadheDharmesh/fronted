@@ -1,0 +1,50 @@
+
+.main
+{
+    height: 150px;
+    width: 150px;
+    position: relative;
+
+    transition: 4s;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+
+.front,.up,.down
+{
+    
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    color: white;
+    transform: rotateX(180deg) translateZ(15px);
+    backface-visibility: hidden;
+}
+
+.up
+{
+    background: white;
+    color: black;
+    transform: rotateX(90deg) translateZ(15px);
+}
+
+.back
+{
+    background: blue;
+    transform: rotateX(180deg) translateZ(50px);
+}
+
+.down
+{
+    background:green;
+    transform: rotateX(-90deg) translateZ(50px);
+} 
+
+.main:hover 
+{
+    transform: rotateX(-90deg);
+}
+

@@ -1,0 +1,72 @@
+.menu 
+{
+    display:grid;
+    grid-template-columns: 1fr 2fr 2fr 2.8fr 2fr 2fr 1fr 1fr 3fr 1fr;
+    grid-template-rows: 80px;
+    background: black;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+  
+}
+.menu .m
+{
+    display: inline-block;
+
+}
+.menu .shop{background:  #2fdab8;}
+.menu .shop button
+{
+    height: 40px;width: 40px;
+    background: rgba(132, 129, 129, 0.4);
+    font-size: 25px;
+}
+.menu .underline i
+{
+    font-size: 14px;
+}
+
+.submenu
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 500px;
+    height: 300px;
+    background: yellow;
+    visibility: hidden;
+}
+
+.submenu .left,.submenu .right
+{
+   
+    background: white;
+    color: black;
+    border: 3px solid red;
+} 
+.down:hover .submenu
+{
+    visibility: visible;
+}
+
+.underline
+{
+    position: relative; 
+}
+.underline::after
+{    
+    content: "";
+    height: 7px;width: 0px;
+    transition: .4s;
+    background: #2fdab8;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+.underline:hover::after
+{
+    width: 100%;
+}

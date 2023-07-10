@@ -1,0 +1,36 @@
+
+.header .topbar
+{
+
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ border-top: 1px solid gray;
+ border-bottom: 1px solid gray;
+}
+.header .topbar .social ,.header .topbar .feedback 
+{
+    display: grid;
+    text-align: center;
+}
+.header .topbar .social 
+{
+    grid-template-columns: 2fr repeat(8,1fr);
+}
+.header .topbar .feedback 
+{
+    grid-template-columns: 3fr 2fr 2fr 2fr .5fr;
+    
+}
+
+.topbar .x
+{
+    padding: 10px;
+    border-left: 1px solid gray;
+}
+.topbar .y
+{
+    padding: 10px;
+    border-right: 1px solid gray;
+}
+.x:hover
+{color: blue;}

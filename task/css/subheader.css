@@ -1,0 +1,103 @@
+.subheader ul,.subheader li
+{
+    text-align: center;
+    line-height: 100px;
+}
+.subheader ul
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr ;
+    grid-template-rows: auto;
+}
+.subheader li
+{
+    display: inline-block;
+}
+.subheader input
+{
+    height: 36px;
+    width: 60%;
+    border: 1px solid gray;
+   
+}
+.subheader input:focus
+{
+    outline: none;
+}
+.subheader .input button
+{
+    background:  #2fdab8;
+    height: 40px;
+    width: 40px;
+}
+.logo
+{
+    font-size:  40px;
+    letter-spacing: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    overflow: hidden;
+
+}
+ .logo i
+{
+    color:  #2fdab8;
+    transform:translate(-45px,18px) ;
+    font-size: 17px;
+}
+.subheader .logo::first-letter
+{
+    background: black;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+.subheader .social
+{
+    text-align: left;
+    font-size:20px;
+    letter-spacing: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+.symmain 
+{
+   height: 30px;
+   width: 30px;
+   position: relative;
+   transform-style:preserve-3d ;
+   transition: 1s;
+   display:inline-block ;
+   
+}
+
+ .symfront,.symup
+{
+    
+    height: 30px;
+    width: 30px;
+    color: white;
+    position: absolute;
+    transform: rotateX(0deg) translateZ(15px) translate(5px,10px);
+    backface-visibility: hidden;
+}
+.symup
+{
+    background:white;
+    color: black;
+    transform: rotateX(90deg) translateZ(15px) translate(5px,10px);
+}
+
+.fb{left:5%;}
+.fb .symfront{ background:#3b5998 ;}
+.twit{left: 10%;}
+.twit .symfront{ background:#00acee;}
+.insta{left:15%;}
+.insta .symfront{ background: #E4405F;}
+.li{left: 20%;}
+.li .symfront{ background: #0A66C2 ;}
+
+.symmain:hover 
+{
+    transform: rotateX(-90deg);
+}

@@ -1,0 +1,10 @@
+﻿1. What is git
+Git is a version control system used for tracking changes in computer files
+
+
+2. What is doc type
+ an "information" to the browser about what document type to expect. 
+
+
+     3.which media we use in html 
+MP4, WebM, and Ogg video,& MP3, WAV, and OGG audio

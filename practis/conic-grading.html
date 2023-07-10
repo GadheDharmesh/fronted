@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conic-gradient</title>
+    <style>
+        *{float: left;}
+        .nm
+        {
+            height: 100px;width: 100px;
+            background: conic-gradient(blue 0deg,blue 90deg,yellow 90deg,yellow 180deg ,green 180deg,green 270deg,red 270deg,red 360deg);
+            border-radius: 50%;
+        }
+        .rcb
+        {
+            height: 100px;width: 100px;
+            background: repeating-conic-gradient(lightblue 0deg,lightblue 30deg,coral 30deg,coral 60deg );
+            border-radius: 50%;
+           
+        }
+        .zx
+        {
+            height: 100px;width: 100px;
+            background: conic-gradient(from 0deg, red,blue);
+            border-radius: 50%;
+        }
+        .zy
+        {
+            height: 100px;width: 100px;
+            background: conic-gradient(at 80% 40%, red,  blue,green,yellow);
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="nm"></div>
+        <div class="rcb"></div>
+        <div class="zx"></div>
+        <div class="zy"></div>
+    </body>
+</html>

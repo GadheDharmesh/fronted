@@ -1,0 +1,10 @@
+@import url(header.css);
+@import url(left.css);
+@import url(right.css);
+@import url(media.css);
+
+*{box-sizing: border-box;}
+.main{display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+}

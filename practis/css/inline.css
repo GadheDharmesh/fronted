@@ -1,0 +1,21 @@
+.div
+{
+    
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+.f
+{
+    position: absolute;
+    height: 7px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    background: lightblue;
+}
+.div:hover .f{
+    width: 100%;
+}
