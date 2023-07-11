@@ -1,5 +1,5 @@
 .left{
-    width: 30%;
+    width: 25%;
     height: 700px;
   position: fixed;
   top: 0;
@@ -39,7 +39,7 @@
   font-size: 20px;
   font-weight: bold;
 }
-.left .menu .option { line-height:40px; }
+.left .menu .option { line-height:60px; }
 .left .menu .x
 { 
 display: flex;

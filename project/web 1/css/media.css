@@ -7,5 +7,12 @@
     .downbar{ row-gap: 30px;  transform: translateY(-120px);}
     .downbar .subsec{width: 100%;text-align: left;}
     .partb{margin-top: 80px;}
-    .partb .right-ls,.partb .right-rs{width: 100%;}
+    .right-ls,.right-rs{width: 100%;}
+    .anime{margin-left: 10px;}
 }
+@media(min-width:1150px)
+{
+    .partb{  transform: translate(0px,-150px);}
+ 
+}
+

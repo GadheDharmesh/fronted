@@ -1,6 +1,5 @@
-.right{width: 70%;margin-left: 30%;}
+.right{width: 70%;margin-left: 25%;}
 .part{
-   
     width: 100%;
     position: relative; 
 }
@@ -69,19 +68,16 @@
 {
     width: 100%;
 }
-.partb,.partc
-{
-    border: 1px solid;
+
+.partb,.partc,.partd,.parte{
    padding: 20px;
    display: flex;
-   flex-wrap: wrap;
-   
-}
-.partb .right-ls,.partc .right-ls
+   flex-wrap: wrap;}
+.right-ls
 {
     width: 50%;
 }
-.partb .right-ls p,.partc .right-ls p
+.right-ls p
 {
     display: flex;
 }
@@ -105,79 +101,103 @@ p .about::after
     left: -10px ;
     background:linear-gradient(90deg,#f700e3,#8f05f7f5);
 }
-.partb .right-ls p .line,.partc .right-ls p .line
-{
-    font-size:25px;text-indent: 10px; font-weight: 900;
-}
+.right-ls p .icon img{height: 30px; width: 30px;
+    }
 
-.partb .right-ls .subline,.partb .right-ls .subline
-{
+.right-ls p .line{
+    font-size:25px;text-indent: 10px; font-weight: 900;}
+
+.right-ls .subline{
     font-size: 20px;
     line-height: 6vh;
-}
+   }
+.right-ls .i{
+    padding: 30px;}
 
-.partb .right-ls .design,.partc .right-ls .design{margin-top: 80px;}
+.right-ls .design,.design{margin-top: 80px; display: flex;flex-wrap: wrap;}
+.partb .right-ls .design .ratio{width: 32%; object-fit: contain; }
 
-.partb .right-rs,.partb .right-rs
+.right-rs
 {
     width: 50%;
 }
-.partb .right-rs img
-{
-    width: 100%;
-}
-.partc{
+.right-rs img{
+    width: 100%;}
+.partc,.parte{
     background: linear-gradient(rgba(0, 0, 0,.9),rgba(0, 0, 0,.9)),url(../img/theme-07-600x589.jpg);
-    background-size: 120% 100%;
-    background-attachment: fixed;
-}
-.partc .right-ls p .line,.partc .right-ls p .about,.partc .right-ls .subline{color: white; padding: 5px;}
+    background-size: 100% 100%;
+    background-attachment: fixed;}
+.partc .right-ls p .line,.partc .right-ls p .about,.partc .right-ls .subline,.parte .right-ls p .line,.parte .right-ls p .about,.parte .right-rs
+{color: white; padding: 5px;}
 
-.anime
-{
+.anime{
+    border-radius: 50% 50%;
+    text-align: center;
     height: 100px;width: 100px;
     margin-left: 100px;
+    color: white;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background:linear-gradient(90deg,#f700e3,#8f05f7f5);
-    line-height: 90px;
     font-size: 20px;
+    position: relative;}
+
+.effecta,.effectb,.effectc{
+    content: "";
+    height: 100px;width: 100px;
+    border-radius: 50% 50%;
+    position: absolute;
+    background: transparent;
+    outline: 1px solid white; 
+    animation: effects 3s infinite linear;}
+.effectb{
+    animation-delay: 1s;}
+.effectc{
+    animation-delay: 2s;}
+
+@keyframes effects{  
+        0%{  transform: scale(1);opacity: 1;}
+        100%{transform: scale(1.6); opacity: 0;}}
+
+.anime:hover .effecta,.anime:hover .effectc,.anime:hover .effectb{
+    animation-play-state: paused;
 }
-.circle{border-radius: 50% 50%;
+
+.circle{
+    border-radius: 50% 50%;
     text-align: center;
      position: relative;
     padding: 5px;
     color: white;
-    font-weight: 900;
-}
+    font-weight: 900;}
 .a{
      height: 100px;width: 100px;
      background: linear-gradient(90deg,rgba(247, 0, 227,.4),rgba(143, 5, 247, 0.6)), url(../img/theme-06-600x589.jpg);
      background-size: 100% 100%; 
      padding: 20px;
-     transform: translate(80px,90px);
-    }
+     transform: translate(80px,90px);}
 .b{
         height: 150px;width: 150px;
         background: linear-gradient(90deg,rgba(247, 0, 227,.4),rgba(143, 5, 247, 0.6)), url(../img/theme-05-600x589.jpg);
         background-size: 100% 100%; 
         transform: translate(220px,0px);
         line-height: 20px;
-        padding: 40px;
-       }
+        padding: 40px;}
 .c{
         height: 100px;width: 100px;
         background: linear-gradient(90deg,rgba(247, 0, 227,.4),rgba(143, 5, 247, 0.6)), url(../img/theme-04-600x589.jpg);
         background-size: 100% 100%; 
         transform: translate(230px,30px);
-        padding: 20px;
-       }
+        padding: 20px;}
 .d{
         height: 150px;width: 150px;
         background: linear-gradient(90deg,rgba(247, 0, 227,.4),rgba(143, 5, 247, 0.6)), url(../img/theme-01-600x589.jpg);
         background-size: 100% 100%; 
         transform: translate(40px,-120px);
         line-height: 20px;
-        padding: 40px;
-       }
+        padding: 40px;}
 .circle::after{
       content: "";
       background: #54595F;
@@ -187,3 +207,7 @@ p .about::after
       width:inherit;transition: .5s;
         z-index: -1;}
 .circle:hover::after{transform: scale(0);}
+
+.parte {
+     background: linear-gradient(rgba(0, 0, 0,.9),rgba(0, 0, 0,.9)),url(../img/theme-13.jpg);}
+       
