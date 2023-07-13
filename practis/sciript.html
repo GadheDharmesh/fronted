@@ -7,30 +7,49 @@
     <title>Document</title>
     <style>
         #d{ background: blue;}
+        #hello_moto{background: red;}
     </style>
 </head>
 <body>
     <h1 ondblclick="delet()" > hello</h1>
 
     <button id="d" onclick="t()"> jine mere  dil luteya</button>
+    <div id="hello_moto" ondblclick=copy()>haje kad patla blori aunde nain nain</div>
+    <P></P>
+    
     <script> 
      document.write(' this <u>is</u> script') 
      console.log("hello moto")
-    
-     window.prompt("sethji meri pagar kab badha rhe hai...?")
-     window.print()
+     var x=3
+    var x="jesa aap kahe"
+    const y=6
+    let z=0
+   
+  
 function t()
 {
     document.getElementById('d').innerHTML="oyy hoy"
+    window.prompt("sethji meri pagar kab badha rhe hai...?")
 }
+
 function delet()
 {
     window.alert('goli beta msti nai...!')
 }
 function copy()
 {
+    document.getElementById('hello_moto').innerText="gala krdi mithiya badi oyy"
     window.confirm('jo bhi la rhi ho do lana ...!')
+
+    window.print()
+
 }
+document.write(x)
+    
+    document.write(y)
+    
+    document.write(z)
+
     </script>
 </body>
 </html>
