@@ -73,10 +73,11 @@
    padding: 20px;
    display: flex;
    flex-wrap: wrap;}
-.right-ls
+.right-ls,.right-rs
 {
     width: 50%;
 }
+.right-ds{ width: 100%;}
 .right-ls p
 {
     display: flex;
@@ -117,10 +118,7 @@ p .about::after
 .right-ls .design,.design{margin-top: 80px; display: flex;flex-wrap: wrap;}
 .partb .right-ls .design .ratio{width: 32%; object-fit: contain; }
 
-.right-rs
-{
-    width: 50%;
-}
+
 .right-rs img{
     width: 100%;}
 .partc,.parte{
