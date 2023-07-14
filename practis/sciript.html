@@ -7,14 +7,15 @@
     <title>Document</title>
     <style>
         #d{ background: blue;}
-        #hello_moto{background: red;}
+         #hello_moto{background: red;} 
+       
     </style>
 </head>
 <body>
     <h1 ondblclick="delet()" > hello</h1>
 
     <button id="d" onclick="t()"> jine mere  dil luteya</button>
-    <div id="hello_moto" ondblclick=copy()>haje kad patla blori aunde nain nain</div>
+    <button id="hello_moto" onclick=copy()>kad patla blori aunde nain nain</button>
     <P></P>
     
     <script> 
@@ -25,25 +26,49 @@
     const y=6
     let z=0
    
+    var btn_tag=document.getElementById("hello_moto")
+    var h_tag=document.getElementById("d")
   
 function t()
 {
-    document.getElementById('d').innerHTML="oyy hoy"
-    window.prompt("sethji meri pagar kab badha rhe hai...?")
+   
+    // window.prompt("sethji meri pagar kab badha rhe hai...?")
+    if ( h_tag.innerHTML==" jine mere  dil luteya")
+    {
+        h_tag.innerHTML="oyy hoy"
+    }
+
+    else 
+    {
+        h_tag.innerText=" jine mere  dil luteya"
+    }
 }
 
 function delet()
 {
-    window.alert('goli beta msti nai...!')
+    //window.alert('goli beta msti nai...!')
 }
 function copy()
 {
-    document.getElementById('hello_moto').innerText="gala krdi mithiya badi oyy"
-    window.confirm('jo bhi la rhi ho do lana ...!')
+    
+       if(btn_tag.style.background=='red')
+    {
+    btn_tag.style.background='purple'
+   
+    }
+     else
+     {
+        btn_tag.style.background='red'
+     }
+  //  window.confirm('jo bhi la rhi ho do lana ...!')
 
-    window.print()
+ //   window.print()
 
 }
+
+
+
+
 document.write(x)
     
     document.write(y)
