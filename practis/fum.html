@@ -33,7 +33,9 @@
     <script>
         var img1=document.getElementById('d');
        console.log(img1.src);
-       if(img1.src.match("media/bot_2.jpg"))
+        function scroll()
+        {
+            if(img1.src.match("media/bot_2.jpg"))
             {
                 img1.src="media/WhatsApp Image 2023-06-22 at 2.52.24 PM.jpeg";
             }
@@ -41,6 +43,7 @@
             {
                 img1.src="media/bot_2.jpg";
             }
+        } 
     </script>
 </body>
 </html>
