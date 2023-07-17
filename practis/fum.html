@@ -25,25 +25,53 @@
 <body>
 
    <div class="popbar">
-     <button onclick="scroll()"><i class="fa fa-arrow-left"></i> </button>
+     <button onclick="erty()"><i class="fa fa-arrow-left"></i> </button>
      <img id="d" src="media/bot_2.jpg" alt="">
-     <button onclick="scroll()" ><i class="fa fa-arrow-right"></i> </button>
+     <button onclick="ertyy()" ><i class="fa fa-arrow-right"></i> </button>
    </div>
-
+     <!-- <img src="media/babypikachu.jpg" alt=""> -->
     <script>
-        var img1=document.getElementById('d');
-       console.log(img1.src);
-        function scroll()
+        var img1=document.getElementById('d');       
+        function ertyy()
         {
             if(img1.src.match("media/bot_2.jpg"))
             {
                 img1.src="media/WhatsApp Image 2023-06-22 at 2.52.24 PM.jpeg";
             }
+            else if(img1.src.match("media/babypikachu.jpg"))
+            {
+                img1.src="media/IMAGE_1682176578.jpg";
+            }
+            else if(img1.src.match("media/IMAGE_1682176578.jpg"))
+            {
+                img1.src="media/bot_2.jpg"
+            }
             else
             {
-                img1.src="media/bot_2.jpg";
+               
+                img1.src="media/babypikachu.jpg";
+            }  
+        }
+        function erty()
+        {
+            if(img1.src.match("media/bot_2.jpg"))
+            {
+                img1.src="media/IMAGE_1682176578.jpg";
             }
-        } 
+            else if(img1.src.match("media/babypikachu.jpg"))
+            {
+                img1.src="media/WhatsApp Image 2023-06-22 at 2.52.24 PM.jpeg";
+            }
+            else if(img1.src.match("media/IMAGE_1682176578.jpg"))
+            {
+                img1.src="media/babypikachu.jpg";
+            }
+            else
+            {
+                img1.src="media/bot_2.jpg"
+            }  
+        }
+        
     </script>
 </body>
 </html>
