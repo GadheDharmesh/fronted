@@ -11,13 +11,29 @@
             display: flex;
             flex-grow: 1;
             justify-content: space-between;
+            position: relative;
         }
         button{
             background: transparent;
             border: none;
+            position: absolute;
+            top: 45%;
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: cursive;
+            box-shadow: 0 0 33px white inset;
+            border-radius: 50px;
         }
+        .left {
+                left: 20px;}
+        .right{
+                right: 20px;}
         img{
-            width: 100%;height: 500px;   }
+            width: 100%;height: 500px;     }
+        #d{
+            margin-left: 50px;
+            transition: 5s;
+        }
        
     </style>
 
@@ -25,9 +41,9 @@
 <body>
 
    <div class="popbar">
-     <button onclick="erty()"><i class="fa fa-arrow-left"></i> </button>
+     <button class="left" onclick="erty()" > < </button>
      <img id="d" src="media/bot_2.jpg" alt="">
-     <button onclick="ertyy()" ><i class="fa fa-arrow-right"></i> </button>
+     <button class="right"  onclick="ertyy()" > > </button>
    </div>
      <!-- <img src="media/babypikachu.jpg" alt=""> -->
     <script>
@@ -48,10 +64,13 @@
             }
             else
             {
-               
                 img1.src="media/babypikachu.jpg";
             }  
+            img1.style.marginLeft="0px"
+        
         }
+        // setInterval(ertyy,3500)
+       
         function erty()
         {
             if(img1.src.match("media/bot_2.jpg"))
