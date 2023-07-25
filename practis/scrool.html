@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .aj{
+        height: 100px;
+        width: 100px;
+        background: blue;
+        text-align: center;
+        line-height:100px;
+        position: fixed;
+        top: 20px;
+        left: 600px;
+        transform: rotate(0deg);
+        transition: 1s;
+    }
+
+    </style>
+</head>
+<body onscroll="scrollEffect()">
+    <div class="aj" id="aj" >  hello moto</div>
+    <script>
+        const x=[1,2,3,4,5,6,7];
+        document.write(x[0]);
+        document.write("<br>");
+        var evu=document.getElementById('aj')
+
+            for(n=0;n<100;n++)
+        {
+             document.write(x[n]);
+            document.write("<br>");
+         }
+
+         
+         function scrollEffect()
+      {
+        if(document.documentElement.scrollTop > 570)
+        {
+          evu.style.background="yellow";
+          evu.style.left="300px";
+          evu.style.transform="rotate(360deg)";
+          evu.style.transition="1s"
+
+        }
+
+        else 
+        {
+            evu.style.background="red";
+            evu.style.left="600px";
+            evu.style.transform="rotate(0deg)";
+            evu.style.transition="1s"
+        }
+      }
+
+    </script>
+    
+
+            
+         
+   
+</body>
+</html> 

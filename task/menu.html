@@ -9,7 +9,7 @@
     {
         text-align: center;  
     }
-    #submenu
+    .smenu
     {
         display: none;
     }
@@ -27,27 +27,22 @@
 </style>
 </head>
 <body>
-    <div class="bar " onclick="cli()"> bar
-         <ul id="submenu">
+
+
+         <ul id="submenu" class="submenu">
             <li>home</li>
             <li>about</li>
             <li>service</li>
             <li>contact</li>
          </ul>
-    </div>
-    <ul class="menu">
-        <li>home</li>
-        <li>about</li>
-        <li>service</li>
-        <li>contact</li>
-    </ul>
+          <div class="bar " onclick="cli()"> bar</div>
+ 
 
     <script>
         var m=document.getElementById("#submenu")
         function cli()
         {
-            m.display="block"
-            m.background="gray"
+            
         }
     </script>
 </body>
