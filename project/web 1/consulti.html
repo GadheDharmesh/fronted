@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/cinsuiltmain.css">
     <style>*{box-sizing: border-box;margin: 0;padding: 0;}</style>
+ 
 </head>
 <body>
     <div class="main">
         <!-- headr start -->
-        <div class="header"> <span><i class="fa fa-bars"></i></span></div>
+        <div class="header"> <span onclick="menu()"><i class="fa fa-bars"></i></span></div>
         <!-- headr start  -->
               <!-- left side start -->
-                   <div class="left">
+                   <div class="left" id="left">
                     <ul class="menu">
                         <li class="option"> <img src="img/p-dark-logo3.png" alt="" height="100%" width="100%"></li>
                         <li class="option"><span class="underline">Home</span> </li>
@@ -56,7 +57,7 @@
               <!-- right side start -->
         <div class="right">
              <!-- part1 start --> 
-            <div class="part"> 
+            <div class="part a"> 
                    <div class="video">
                     <video src="img/WhatsApp Video 2023-07-03 at 5.22.59 PM.mp4" height="100%" width="100%" loop controls autoplay="autoplay" muted ></video>
                    </div>
@@ -80,7 +81,7 @@
             </div> 
                <!-- part1 end -->
                <!-- part2 start -->
-               <div class="partb">
+               <div class="part b">
                 <div class="right-ls"> <p><span class="about">About us</span>
                   <span class="line">  Consulting is a law firm specialising in corporate finance work</span></p>
                    <span class="subline"> 
@@ -98,7 +99,7 @@
                </div>
                 <!-- part2 end -->
                 <!-- part3 start -->
-                <div class="partc">
+                <div class="part c">
                     <div class="right-ls"> <p><span class="about">
                         Funfact</span>
                       <span class="line">Don’t misread here we have random & interesting facts.</span></p>
@@ -115,19 +116,19 @@
                     </div>
                   
                     <div class="right-rs"> 
-                        <div class="circle a">105 +<br>
+                        <div class="circle a1">105 +<br>
                             Team members</div>
-                        <div class="circle b">215 + <br>
+                        <div class="circle b1">215 + <br>
                             Client’s Feedback</div>
-                        <div class="circle c">8 +<br>
+                        <div class="circle c1">8 +<br>
                             Winning Awards</div>
-                        <div class="circle d">310 + <br>
+                        <div class="circle d1">310 + <br>
                             Completed Works</div>
                     </div>
                    </div>
                 <!-- part3 end -->
                 <!-- part4 strat -->
-                <div class="partd">
+                <div class="part d">
                     <div class="right-ls">
                         <p><span class="about">Why Choose</span>
                            <span class="line">Why ChooseThere are many consulting firm in this city but 
@@ -160,15 +161,13 @@
                    </div>
                 <!-- part4 end -->
                 <!-- part5 strat -->
-                <div class="parte">
+                <div class="part e">
                     <div class="right-ls"> <p><span class="about">Services </span>
                       <span class="line">We deals with many services to take extra care of your problem solutions.</span></p>
                     </div>
                   
                     <div class="right-rs"> 
-                        Business services is a general term that describes work that
-                         supports a business but does not produce a tangible commodity.
-                         Information technology is important.
+                     <div class="subline">   Business services is a general term that describes work that supports a business but does not produce a tangible commodity.         Information technology is important.</div>
                     </div>
 
                     <div class="right-ds">
@@ -209,15 +208,14 @@
                  <!-- part5 end -->    
                  
                  <!-- part 6 start -->
-                 <div class="partf">
+                 <div class="part f">
                     <div class="right-ls"> <p><span class="about">Testimonial </span>
                       <span class="line">It’s always a joy to hear that the work we do, has positively review.</span></p>
                     </div>
                   
                     <div class="right-rs"> 
-                        We have spent 9 years working for one of Australia’s most 
-                        recognised and successful retailers so we have many good review of works.
-
+                        <div class="subline">       We have spent 9 years working for one of ustralia’s most recognised and successful retailers so we have many good review of works.
+    </div>
                     </div>
                     <div class="right-ds">
                         <div class="slider">
@@ -227,23 +225,22 @@
                         </div>
                            
                             <div class="subpart">
-                                <div class="right-rs"> 
-                                    <div class="spimg"> <img src="img/testimonial-01-122x122.jpg" alt=""></div>
-                                </div>
+                                 <div class="right-rs"> 
+                                    <div class="spimg"><img src="img/testimonial-01-122x122.jpg"></div>
+                                 </div>
                         
                               
                                
                                  <div class="right-ls"> 
-                                    <p class="line">AMY HARRISON </p>
-                                   <span class="subline">cooki holder</span>
+                                       <p class="line">AMY HARRISON </p>
+                                       <span class="subline">cooki holder</span>
                                      <div class="star">
-                                        <i class="fa fa-star" aria-hidden="true"></i> 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                       
-                                    </div>  
-                                </div>
+                                         <i class="fa fa-star" aria-hidden="true"></i> 
+                                         <i class="fa fa-star" aria-hidden="true"></i>
+                                         <i class="fa fa-star" aria-hidden="true"></i>
+                                         <i class="fa fa-star" aria-hidden="true"></i>
+                                     </div>  
+                                 </div>
                             </div>
                         </div>
                        
@@ -307,7 +304,84 @@
 
                     <!-- part 6 end -->
            </div> 
+
+           <!-- part 7 start -->
+             <!-- part 7 end -->
+
+              <!-- part 8 start -->
+             <!-- part 8 end -->
+
+              <!-- part 9 start -->
+
+              <div class="part i">
+                <div class="right-ls"> <p><span class="about">
+                    contact us</span>
+                  <span class="line">Our client, global analytical techno company, wanted to build market.</span></p>
+                  </div>
+                  <div class="right-rs"> 
+                   <div class="subline">For any inquiries relating to my Retail and Leadership Programs or Coaching and Mentoring services feel free to speak to me personally by call us during business hours.</div>        
+                </div>
+
+                <div class="part j">
+                           
+                    <div class="right-ls"  >
+                        <table >
+                            <tr><td rowspan="2"><div class="circle i1"> 
+                                <i class="fa fa-map-marker"></i></div></td>
+                                <td class="line">Head office address:</td>
+                               </tr>
+                            <tr> <td  class="subline">3556 Hartford Way Vlg, Mount Pleasant, SC, 29466, Australia.</td></tr>
+
+                            <tr><td rowspan="2"><div class="circle i1">
+                                 <i class="fa fa-phone"></i></div></td>
+                                <td class="line">Call for help:</td>
+                               </tr>
+                            <tr> <td  class="subline">(734) 697-2907<br>
+                                (843) 971-1906</td></tr>
+
+                            <tr><td rowspan="2"><div class="circle i1">
+                                <i class="fa fa-envelope"></i> </div></td>
+                                <td class="line">Mail for information:</td>
+                               </tr>
+                            <tr> <td  class="subline">noreply@envato.com<br>noreply@consultio.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right-rs">  
+                             <table align="left" cellspacing="5px">
+                                     <tr class="rs"  >
+                                          <td>First Name: <br><br>
+                                          <input class="data" type="text"></td>
+                                             <td >Last Name: <br><br>
+                                             <input class="data" type="text"></td>
+                                     </tr>
+                                 <tr class="rs" >
+                                 <td colspan="">Select a subject* <br><br>
+                                 <select class="data"></select></td>
+                                 <td >Your mail address* <br><br>
+                                 <input class="data" type="email"></td>
+                                </tr>
+                         <tr class="rs" >
+                         <td colspan="2">Write your message: <br><br>
+                         <textarea  cols="40" rows="10"></textarea>
+                         </tr>
+                         <tr >
+            <td> <button class="submit"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                SUBMIT NOW</button></td>
+        </tr>
+        </table>
+                </div>
+                </div>
+
+              </div>
+             <!-- part 9 end -->
+
+              <!-- part 10 start -->
+             <!-- part 10 end -->
           <!-- right end -->
     </div>
+
+    <script src="js/web1.js">
+   </script>
 </body>
 </html>

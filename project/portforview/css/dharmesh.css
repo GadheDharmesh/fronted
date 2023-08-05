@@ -1,0 +1,84 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    /* border: 1px solid; */
+}
+
+li
+{
+    transition: .50s;
+}
+li:hover
+{
+    border-bottom: 2px solid #ffbd39;
+}
+td
+{
+    color: grey;
+}
+.image span
+{
+    color: #ffbd39;
+}
+.about
+{
+    line-height: 40px;
+}
+.education 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.education h5
+{
+    color: grey;
+}
+.education .clg
+{
+    color: #ffbd39;
+}
+.about h2,.resume h2,.urv h2,.skill h2,.contact1 h2
+{
+    transition: .50s;
+}
+.about h2:hover,.resume h2:hover,.urv h2:hover,.skill h2:hover,.contact1 h2:hover
+{
+    color: #ffbd39;
+}
+.project
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.contact
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    line-height: 70px;
+}
+.contact a 
+{
+    text-decoration: none;
+    color: White;
+    transition: .50s;
+}
+.contact a:hover
+{
+    color: #ffbd39;
+}
+@media(max-width:900px)
+{
+    .project
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:750px)
+{
+    .project
+    {
+        grid-template-columns: 1fr;
+    }
+}

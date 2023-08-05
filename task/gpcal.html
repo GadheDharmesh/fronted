@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+       .cal{
+        margin: auto;
+        background: gray;
+        text-align: center;
+        display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 500px;
+       }
+       .ganyantar{
+        padding-left: 250px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="ganyantar">
+    <input type="text" id="display" >
+   </div>
+    <div class="cal">
+    <button onclick="add('/')">/</button>
+    <button onclick="add('0')">0</button>
+    <button onclick="add('.')">.</button>
+    <button onclick="clear()">AC</button>
+    <button onclick="add('*')">*</button>
+    <button onclick="add('7')">7</button>
+    <button onclick="add('8')">8</button>
+    <button onclick="add('9')">9</button>
+    <button onclick="add('-')">-</button>
+    <button onclick="add('4')">4</button>
+    <button onclick="add('5')">5</button>
+    <button onclick="add('6')">6</button>
+    <button onclick="add('+')">+</button>
+    <button onclick="add('1')">1</button>
+    <button onclick="add('2')">2</button>
+    <button onclick="add('3')">3</button>
+    <button onclick="calculate()">=</button>
+    </div>
+    </body>
+
+<script>
+    function add(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function clear() {
+        document.getElementById('display').value ='';
+    }
+
+    function calculate() {
+        let equation = document.getElementById('display').value;
+        let result;
+        try {
+            result = eval(equation);
+        } catch (error) {
+            result = 'Error';
+        }
+        document.getElementById('display').value = result;
+    }
+</script>
+</html>

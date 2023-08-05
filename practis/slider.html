@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        *{  margin: 0;
+        padding: 0;
+        box-sizing: border-box;}
+    #story{
+        display: flex;
+        border: 1px solid;
+        gap: 10px;
+        height: 400px;
+        width: 600px;
+        margin: auto;
+        overflow: hidden; 
+    }
+    #story img{ 
+        height: 100%;
+         width:100% ;
+         animation: anime 2s 1 linear;
+         transform: translate(100% ,0);
+                
+    }
+
+    @keyframes anime
+    {
+        
+        100%{ transform: translate(-100% ,0);}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="story" >
+        <img src="media/01 babypikachu.jpg" alt="">
+        <img src="media/02 firstmeet.jpg" alt="">
+        <img src="media/03 strong frd.jpg" alt="">
+        <img src="media/03.1 lose.jfif" alt="">
+        <img src="media/04 try again.jfif" alt="">
+        <img src="media/04.1.jfif" alt="">
+        <img src="media/05 final.jfif" alt="">
+        <img src="media/06 fight.jfif" alt="">
+        <img src="media/06.1  victory.jfif" alt="">
+       </div>
+    <script>
+        index=0;
+        function slider()
+        {
+            
+      images = document.getElementsByTagName('img')
+        
+        for(k=0;k <images.length;k++)
+        {
+            images[k].style.display="none";
+            // images[k].style.transform="translate(-100%, 0)";
+            }
+        
+        images[index].style.display="block";
+        // images[index+1].style.display="block";
+        index++;
+        if(index==images.length)
+        {
+            index=0;
+        }
+        setTimeout("slider()",2000)
+        }
+        slider()
+        </script>
+</body>
+</html>
