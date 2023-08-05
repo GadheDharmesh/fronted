@@ -68,6 +68,12 @@ td
 {
     color: #ffbd39;
 }
+#project #img{
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 200px;
+}
 @media(max-width:900px)
 {
     .project
