@@ -4,6 +4,7 @@
   position: fixed;
   top:0px;
   left: 0;
+  display: none;
   overflow: scroll;
   padding: 40px 5px;
   background: white;

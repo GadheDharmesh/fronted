@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 vi fail</title>
+    <link rel="icon" href="https://www.instagram.com/p/CORj-KWhTi_FGn7gV-hqgTiV4Ats1HrDTJoIzQ0/?img_index=1">
+</head>
+<style>
+
+    .left,.main,.right{
+        display: grid; 
+
+        background: black;   
+        box-sizing: border-box;
+        color: aliceblue;}
+
+    .main{
+        grid-template-columns: 4fr 1fr;    }
+    .left{
+        width: 75%; 
+        grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;  
+        justify-content: space-between; }
+
+    .left img{
+        height: 100px;
+    }
+    @media(max-width:900px){
+        .left{
+            grid-template-columns: 1fr;        }  }
+   
+
+</style>
+<body>
+    <div class="main">
+        <div class="left">
+          <img src="media/01 babypikachu.jpg" alt=" 7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+          <img src="media/01 babypikachu.jpg" alt="7vi fail img nakh">
+        </div>
+        <div class="right">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>service</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
