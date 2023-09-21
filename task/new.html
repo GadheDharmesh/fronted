@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title><style>
+    #id{
+        z-index: initial;
+
+    }
+</style>
+</head>
+<body>
+    <div id="id"></div>
+
+
+    <script>
+       var div = document.getElementById("id")
+       var arr = "harsh madha"
+       var main = arr.split("")
+       console.log(main);
+
+       function loop()
+       {
+        if(main.length>0);
+        {
+            div.innerHTML += main.shift("");
+
+        }
+        else
+        {
+            clearTimeout
+        }
+       }
+
+    </script>
+</body>
+</html>

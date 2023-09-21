@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+<body>
+    <div id="hir"></div>
+    <script>
+       const arr = [
+                    {fname:"its",last:"me"},
+                    {fname:"32",last:"somnath"},
+                    {fname:'22jan',last:"kyu batav"}
+       ]
+
+       const hello=arr.map((v)=>{
+        return v.fname+""+v.last})
+
+        console.log(hello)
+
+        var date=`<h1>hi<h1>
+            <ul>`
+        for(val of hello)
+        {
+            date+=`<li>
+                ${val}
+                </li>`
+        }
+        date+=`</ul>`
+        
+        document.getElementById('hir').innerHTML=date
+    </script>
+</body>
+</html>

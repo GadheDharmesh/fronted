@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+    const data1 = ['hi', 'hi' , 'php', 'react','php' ,'react', 'wd'];
+
+const result = data1.reduce((val, item) => {
+  val[item] = (val[item] || 0) +1;
+  return val;
+},{hi:3});
+console.log(result);
+</script>
+</body>
+</html>
