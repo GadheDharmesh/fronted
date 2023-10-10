@@ -1,0 +1,35 @@
+.popup
+{ display: inline-block;
+    height: 50px;width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: black;
+    padding: 25 25;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+ }
+
+.popup::after
+{
+    content: "";
+    height: 0; width: 0;
+    background: skyblue;
+    transform: scale(0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: .5s;
+     z-index: -1; 
+    
+}
+
+.popup:hover::after
+{
+    height: inherit;width: inherit;
+    transform: scale(1);
+    top: 0%;
+    left: 0%;
+    
+}

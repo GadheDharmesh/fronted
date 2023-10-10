@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{margin:  25px auto;}
+        .a
+        {
+            height:300px;width: 300px;
+            border-radius: 50%;
+            border: 5px solid  transparent;
+            border-top: 5px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:transparent;
+            /* position: relative; 
+            z-index: -1;
+            padding: 100px 100px; */
+              animation:  front 2               s infinite linear reverse;  
+        }
+        .f
+        {
+          
+            height:250px;width: 250px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid rgb(198, 14, 131);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  transparent;
+            /* position: absolute; */
+           
+            z-index: 1;
+            animation: front 1s infinite linear ;
+        }
+        .b
+        {
+            content: "";
+            height:200px;width: 200px;
+            border-radius: 50%;
+             border: 5px solid transparent; 
+            border-top: 5px solid blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  transparent;
+            /* position: absolute;
+            padding: 100px 100px; */
+            z-index: 0;
+            animation:  front 1s infinite linear reverse ;
+
+        }
+        .e
+        {
+          
+            height:150px;width: 150px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid rgb(227, 198, 13);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  transparent;
+            /* position: absolute; */
+           
+            z-index: 1;
+            animation : front 1s infinite linear;
+        }
+        .c
+        {
+          
+            height:100px;width: 100px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid rgb(26, 221, 62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  transparent;
+            /* position: absolute; */
+           
+            z-index: 1;
+            animation:  front 1s infinite linear reverse;
+        }
+        .d
+        {
+          
+            height:50px;width: 50px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid rgb(11, 151, 221);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  transparent;
+            /* position: absolute; */
+           
+            z-index: 1;
+            animation: front 1s infinite linear;
+        }
+        @keyframes front
+        {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+         /* @keyframes back
+        {
+            from{transform: rotate(360deg);}
+            to{transform: rotate(0deg);}
+        }   */
+    </style>
+</head>
+<body>
+    <div class="a"> <div class="f">
+        <div class="b">  <div class="e"><div class="c"><div class="d"> </div> </div> </div> </div> </div>
+    </div>
+</body>
+</html>
