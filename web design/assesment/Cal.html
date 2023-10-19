@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            user-select: none;
+            background: #ecf0f3;
+        }
+
+        .calculator {
+            width: auto;
+            height: 400px;
+            margin: 33px auto;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+
+        .display #inp {
+            height: 70px;
+            font-size: 35px;
+            outline: none;
+            border: none;
+            text-align: right;
+            background: #ecf0f3;
+            border-radius: 6px;
+            box-shadow: 5px 5px 5px #9e9fa1;
+        }
+
+        .btn-area {
+            height: 280px;
+            padding: 30px;
+            display: grid;
+            gap:20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: lightblue;
+           
+        }
+
+        .btn-area div {
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffff;
+        }
+
+        #eval {
+            background: #33ccff;
+            color: #fff;
+        }
+
+        #ac {
+            background: #33cc33;
+            color: #fff;
+        }
+
+        #ce {
+            background: #ff3399;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input id="inp" type="text" placeholder="0" value="">
+        </div>
+        <div class="btn-area">
+                <div id="ce" onclick="ce()">CE</div>
+                <div class="btn" onclick="test('%')">%</div>
+                <div class="btn" onclick="test('/')">/</div>
+                <div id="ac" onclick="ac()">AC</div>
+
+                <div class="btn" onclick="test(7)">7</div>
+                <div class="btn" onclick="test(8)">8</div>
+                <div class="btn" onclick="test(9)">9</div>
+                <div class="btn" onclick="test('+')">+</div>
+                
+                <div class="btn" onclick="test(4)">4</div>
+                <div class="btn"onclick="test(5)">5</div>
+                <div class="btn"onclick="test(6)">6</div>
+                <div class="btn" onclick="test('-')">-</div>
+                
+                <div class="btn" onclick="test(1)">1</div>
+                <div class="btn" onclick="test(2)">2</div>
+                <div class="btn" onclick="test(3)">3</div>
+                <div class="btn"onclick="test('')"></div>
+                
+                <div class="btn" onclick="test(0)">0</div>
+                <div class="btn" onclick="test('.')">.</div>
+                <div id="eval" onclick="equalto()">=</div>
+                
+        </div>
+
+    </div>
+    <script>
+        var input_value = document.getElementById('inp');
+
+function test(n) {
+    if (input_value.value === '0')
+    {
+        input_value.value = n; // If the current value is '0', replace it with the clicked button value.
+    } else
+    {
+        input_value.value += n; // Otherwise, append the clicked button value to the current value.
+    }
+}
+
+        function ac() {
+            input_value.value = "0";
+        }
+
+        function equalto()
+        {
+         input_value.value= eval(input_value.value);
+        }
+
+        function ce() {
+            input_value.value = input_value.value.slice(0, -1); // Remove the last character from the input field.
+        }
+
+
+    
+    </script>
+</body>
+
+</html>5
