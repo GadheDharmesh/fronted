@@ -14,7 +14,13 @@
             display:flex ;
             justify-content: space-between;
         }
-        .date,.exit,menu{
+        .date{
+            display: none;
+        }
+        .exit{
+            display: none;
+        }
+        .menu{
             display: none;
         }
        
@@ -37,7 +43,7 @@
         <li class="li" >No of person <br> <input type="number" pattern="{2}"></li>
         <li class="li date" >Date <br> <input type="datetime-local"> </li>
         <li class="li exit">Exit Time <br> 
-            <ul class="menu">
+            <ul class="menu" >
                 <li><input type="radio" name="choice">Break Fast</li>
                 <li><input type="radio" name="choice">Lunch</li>
                 <li><input type="radio" name="choice">Dinner</li>
