@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  
+  <title>jQuery assessment</title>
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+    #day{
+      font-weight: 600;
+      font-size: 30px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 5px;
+      border: 4px solid #0944c4;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: linear-gradient(to bottom, #8c8cd6 ,#dee1f7);
+      width: 30%;
+      margin: 100px  auto 0 auto;
+    }
+
+
+    .time{
+      height:80px;
+      width: 30%;
+      background: linear-gradient(-45deg,red, white,orange,blue,lightgreen,yellow,pink,purple, skyblue);
+      margin: 10px auto;
+      position: relative;
+      border-radius: 5px;
+    }
+
+
+    .time .after{
+      position: absolute;
+      font-size: 40px; 
+      text-align: center;
+      width:100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      background: linear-gradient(-45deg,red, white,orange,blue,lightgreen,yellow,pink,purple, skyblue);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      }
+
+    .time .before{
+      position: absolute;
+      height:90%;
+      width:98%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+      border-radius: 5px;
+    }
+
+
+  </style>
+  
+</head>
+<body onload="showtime()">
+
+ <div class="center">
+  <div id="day"></div>
+    
+    <div class="time">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    
+</body>
+
+<script>
+  // day-date function
+  $(function showday(){
+
+    function getMonthsName(m_no){
+      let months_name = ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October','November', 'December'];
+  
+      return months_name[m_no];
+     }
+
+     function getWeekName(day){
+      let week_name = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+      return week_name[day];
+     }
+
+
+
+    let dt = new Date();
+    // weeks
+    let day = dt.getDay();
+    let weekName = getWeekName(day);
+    let m = dt.getMonth();
+    let month = getMonthsName(m);
+    let d = dt.getDate();
+    let year = dt.getFullYear();
+
+    
+   
+
+    // 0-9 logic in day date format
+    d = d<10 ? "0"+d : d;
+
+    let days = weekName  + ","+ " " + month + " " + d + "," + " " + year;
+
+    $("#day").html(days);
+  })
+
+  // time  function
+  $(function showtime(){
+      let dt = new Date();
+    var h = dt.getHours();
+    let m = dt.getMinutes();
+    let s = dt.getSeconds();
+    var session = "PM";
+
+    // 12 hours logic
+    if(h>12){
+      h = h - 12; //(h= h-12 ) h = 13 -12 =1
+    }
+
+    // AM to PM logic/functionality
+    if(h>=12){
+      session ="AM";
+    }
+
+    // 0-9 clock format logic
+     h = h<10 ? "0"+h : h;
+     m = m<10 ? "0"+m : m;
+     s = s<10 ? "0"+s : s;
+    
+
+    let clock = h  + ":" + m + ":" + s + " " + session;
+
+    $(".after").html(clock);
+
+    setInterval(showtime, 1000);
+  })
+</script>
+</html>
