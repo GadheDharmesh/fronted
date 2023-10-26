@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>marksheet from js</h1>
+    <div style="border: 1px;">
+       
+        c : <input type="number" pattern="{0-9}" max="50" min="0" id="c" ><br>
+        c++: <input type="number"  pattern="{0-9}" max="50" min="0" id="c++"><br>
+        DB: <input type="number"  pattern="{0-9}" max="50" min="0" id="DB"><br>
+        html: <input type="number" pattern="{0-9}"  max="50" min="0" id="html"><br>
+        css: <input type="number"  pattern="{0-9}" max="50" min="0" id="css"><br>
+        php: <input type="number"  pattern="{0-9}" max="50" min="0" id="php"><br>
+        java: <input type="number"  pattern="{0-9}" max="50" min="0" id="java"><br>
+        <button onclick="hi()">cal</button>
+      
+       <br>
+        <p>
+          total:<span id="sum">5</span>/350
+          percentage: <span id="per"></span>
+        </p>
+    </div>
+    <script>
+      
+        const total=document.getElementById('sum');
+        const per=document.getElementById('per');
+        console.log(document.getElementById('c').value)
+
+      function hi()
+      {
+        
+        total.innerText= 
+        document.getElementById('c').value+
+        document.getElementById('c++').value+
+        document.getElementById('DB').value+
+        document.getElementById('html').value+
+        document.getElementById('css').value+
+        document.getElementById('php').value+
+        document.getElementById('java').value
+      }
+    </script>
+</body>
+</html>

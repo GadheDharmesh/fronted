@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        canvas{
+   height: 600px;
+  
+    border: 2px solid red;
+    overflow: hidden;
+   
+}
+
+   
+   #cursor{
+    width: 10px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius:50%;
+    outline: 2px solid red;
+    outline-offset: 20px;
+}
+    </style>
+</head>
+<body>
+   
+    <canvas></canvas>
+    
+   <div id=cursor></div>
+    <script>  
+     let div = document.querySelector('#cursor')
+        document.querySelector('body').onmousemove = function(event){
+            //track mouse position and change for custom cursor
+            div.style.left = event.clientX-0+"px"
+            div.style.top = event.clientY-0+"px"
+        };</script>
+</body>
+</html>
