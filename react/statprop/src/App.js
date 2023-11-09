@@ -1,6 +1,7 @@
 import React from 'react';
 import Fstate from './componenat/Fstate';
 import Cstate from './componenat/Cstate';
+import Nesto from './componenat/Nestedo';
 
 export default function App() {
   return (
@@ -9,6 +10,9 @@ export default function App() {
       <Fstate/>
       <h1>change by class & state</h1>
       <Cstate/>
+      <h1> change nested obj by function state</h1>
+      <Nesto/>
+
 
     </>
   )
