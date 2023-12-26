@@ -21,7 +21,7 @@ MODULE 9 - REACT JS
 	content component contain body ,footer section 
 
  how to install react js on window ,linux operating system? ? how to install npm & chack version of npm :
-	using CLI :- 	npm create-react-app
+	using CLI :- 	npm install -g create-react-app
 			npm i -gnpm@10.1.0
 		        npm -v npm
 
