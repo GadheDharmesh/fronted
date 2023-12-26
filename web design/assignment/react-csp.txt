@@ -1,0 +1,70 @@
+MODULE 9 - REACT JS
+
+ what is react js :
+	react is a java script library its work von virtual dom.
+
+ what is NPM in react js :
+	NPM:- node package manager it use for install or generate ,from node packages.
+ 
+ what is Role of node js in react js :
+	is a most popular platform for hosting & running web server,also we can install pakcage using npm
+
+ what is CLI command id react js : 
+	CLI: command line-interface ,we crite an commad for inatsall pakages or create rect app that line known as CLI
+
+ what is commponents in react js:
+	commponents are independed & reusable bits code , its a combitination of html & scripts ,
+	two types of commponents :  1> class componenets 2> function compponent 
+
+ what is header & content commponent in react js :
+ 	header commpomnents containt the header section of web site like nav,head,logo ,menu &
+	content component contain body ,footer section 
+
+ how to install react js on window ,linux operating system? ? how to install npm & chack version of npm :
+	using CLI :- 	npm create-react-app
+			npm i -gnpm@10.1.0
+		        npm -v npm
+
+ how to check version of react js :
+	 using CLI : npm -v react 
+	or check it mannually in package.json/ dependecies
+
+ how to change in compponents in react js :
+  	by using state & setstate 
+
+ how to create list view in react js :
+
+	const x=0;
+	const hi= ()=>{
+	const arr = [usearray.map,not a for loop , give eaach a uniqe key ,avoid using array index]
+	
+ 	
+	return (
+	<>
+		{arr.map((v)=> return (
+					<>
+					<div key=x++><input type= 'checkbox'/>v<div/></>)}
+	</>
+	)}
+	export default hi
+
+ create increment decrement state change by  button click 
+	  
+
+ 	import react , {usestate} from 'react'
+	export const num = ()=>{
+	 const [number,setnum]= useState(0)
+ 	   const increment=()=>{
+	      setnum(number+1)
+	    }
+	    const decrement=()=>{
+	      setnum(number-1)
+	    }
+		 return (
+			   <>
+     			        <button onClick={increment}>increment </button>
+ 			       <h1>{number}</h1>
+			        <button onClick={decrement}>decrement </button>
+			    </>
+	  )} 
+ 	
