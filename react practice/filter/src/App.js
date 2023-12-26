@@ -65,7 +65,7 @@ const ToDoList = () => {
       <input
         type="email"
         placeholder="Email"
-        pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}'
+        pattern=''
         required=''
         value={email}
         onChange={(e) => setEmail(e.target.value)}

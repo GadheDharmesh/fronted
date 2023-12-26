@@ -1,0 +1,43 @@
+.header{
+        background: #003B95;
+}
+.reg h1{
+        font-size: 30px;
+}
+.rg-sn{
+        border: 1px solid #003B95;
+        padding: 4px 10px;
+        margin: 0 4px;
+        color: #003B95;
+}
+.section{
+        background: url(https://r-xx.bstatic.com/xdata/images/xphoto/2880x868/279346280.jpeg?k=1f5ef835475595e138026356cdf0664eafb17cc2fc5aa9d09d90407d7ca866a1&o=);
+        background-repeat: no-repeat;
+        background-size: cover; 
+}
+.dis{
+        font-size: 17px;
+        padding: 12px 17px;
+}
+.dis,.search{
+        background: #006CE4;
+}
+.footbar{
+        bottom: -18%;
+}
+.inp{
+        outline: none;
+}
+.inp-check{
+        height: 20px;
+        width: 20px;
+}
+.nwbook,.sw-mp{
+        font-size: 12px;
+}
+@media(max-width:1000px){
+        .footbar{
+                transform: translate(0px,150px);
+                position: static !important;
+        }
+}
