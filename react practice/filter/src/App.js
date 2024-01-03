@@ -8,12 +8,27 @@ const ToDoList = () => {
   const [filterEmail, setFilterEmail] = useState('');
   const [filterName, setFilterName] = useState('');
   const [filterId, setFilterId] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+  const [editTaskId, setEditTaskId] = useState(null);
 
   const addTask = () => {
     if (name && email) {
-      const newTask = { id, name, email };
-      setTasks([...tasks, newTask]);
-      setId(id + 1);
+      if (isEditing) {
+        // If editing, update the existing task
+        const updatedTasks = tasks.map((task) =>
+          task.id === editTaskId ? { ...task, name, email } : task
+        );
+        setTasks(updatedTasks);
+        setIsEditing(false);
+        setEditTaskId(null);
+      } else {
+        // If not editing, add a new task
+        const newTask = { id, name, email };
+        setTasks([...tasks, newTask]);
+        setId(id + 1);
+      }
+
+      // Clear input fields
       setName('');
       setEmail('');
     }
@@ -24,14 +39,21 @@ const ToDoList = () => {
     setTasks(updatedTasks);
   };
 
-  const editTask = (taskId, newName, newEmail) => {
-    const updatedTasks = tasks.map((task) => {
-      if (task.id === taskId) {
-        return { ...task, name: newName, email: newEmail };
-      }
-      return task;
-    });
-    setTasks(updatedTasks);
+  const startEditTask = (taskId) => {
+    const taskToEdit = tasks.find((task) => task.id === taskId);
+    if (taskToEdit) {
+      setIsEditing(true);
+      setEditTaskId(taskId);
+      setName(taskToEdit.name);
+      setEmail(taskToEdit.email);
+    }
+  };
+
+  const cancelEdit = () => {
+    setIsEditing(false);
+    setEditTaskId(null);
+    setName('');
+    setEmail('');
   };
 
   const filterTasks = () => {
@@ -55,23 +77,24 @@ const ToDoList = () => {
   return (
     <div>
       <h1>To-Do List</h1>
-     <form>
-     <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        pattern=''
-        required=''
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-     </form>
-      <button onClick={addTask}>Add Task</button>
+      <form>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button type="button" onClick={addTask}>
+          {isEditing ? 'Update Task' : 'Add Task'}
+        </button>
+        {isEditing && <button type="button" onClick={cancelEdit}>Cancel Edit</button>}
+      </form>
 
       <h2>Filter</h2>
       <input
@@ -109,7 +132,7 @@ const ToDoList = () => {
               <td>{task.name}</td>
               <td>{task.email}</td>
               <td>
-                <button onClick={() => editTask(task.id, 'New Name', 'New Email')}>Edit</button>
+                <button onClick={() => startEditTask(task.id)}>Edit</button>
                 <button onClick={() => deleteTask(task.id)}>Delete</button>
               </td>
             </tr>
