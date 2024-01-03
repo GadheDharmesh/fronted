@@ -6,7 +6,7 @@ function Home() {
 
    const usersData =  useSelector(state => state.users)
    console.log(usersData);
-  return (
+  return (<>
     <div className=' container'>
         <h2 className='my-4'>User Data</h2>
         <Link to="/create" className='btn btn-primary my-4'>Add New (+)</Link>
@@ -41,6 +41,7 @@ function Home() {
 
       
     </div>
+    </>
   )
 }
 
