@@ -1,0 +1,77 @@
+What is Redux?
+Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion
+
+
+• What is Redux Thunk used for?
+Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters.
+
+
+• What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+Regular Component: Re-renders whenever its parent component re-renders or when its state or props change, even if the changes don't affect the component's output. PureComponent: Implements a shallow comparison in shouldComponentUpdate and only re-renders when there are changes in its state or props
+
+
+
+• Create a Table and Search data from table using React Js?
+
+import React, { useState } from 'react';
+
+const Table = ({ data }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map((item, index) => (
+            <tr key={index}>
+              <td>{item.name}</td>
+              <td>{item.age}</td>
+              <td>{item.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+const App = () => {
+  const data = [
+    { name: 'John Doe', age: 30, email: 'john@example.com' },
+    { name: 'Jane Smith', age: 25, email: 'jane@example.com' },
+    { name: 'Tom Brown', age: 35, email: 'tom@example.com' },
+    { name: 'Alice Johnson', age: 28, email: 'alice@example.com' },
+  ];
+
+  return (
+    <div>
+      <h1>Table with Search</h1>
+      <Table data={data} />
+    </div>
+  );
+};
+
+export default App;
+

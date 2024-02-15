@@ -5,9 +5,8 @@ const ToDoList = () => {
   const [id, setId] = useState(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [filterEmail, setFilterEmail] = useState('');
-  const [filterName, setFilterName] = useState('');
-  const [filterId, setFilterId] = useState('');
+  const [filter, setFilter] = useState('');
+
   const [isEditing, setIsEditing] = useState(false);
   const [editTaskId, setEditTaskId] = useState(null);
 
@@ -57,21 +56,12 @@ const ToDoList = () => {
   };
 
   const filterTasks = () => {
-    let filteredTasks = tasks;
-    if (filterId) {
-      filteredTasks = filteredTasks.filter((task) => task.id === parseInt(filterId));
-    }
-    if (filterName) {
-      filteredTasks = filteredTasks.filter((task) =>
-        task.name.toLowerCase().includes(filterName.toLowerCase())
-      );
-    }
-    if (filterEmail) {
-      filteredTasks = filteredTasks.filter((task) =>
-        task.email.toLowerCase().includes(filterEmail.toLowerCase())
-      );
-    }
-    return filteredTasks;
+    const lowerCaseFilter = filter.toLowerCase();
+    return tasks.filter((task) =>
+      String(task.id).includes(lowerCaseFilter) ||
+      task.name.toLowerCase().includes(lowerCaseFilter) ||
+      task.email.toLowerCase().includes(lowerCaseFilter)
+    );
   };
 
   return (
@@ -99,21 +89,9 @@ const ToDoList = () => {
       <h2>Filter</h2>
       <input
         type="text"
-        placeholder="ID"
-        value={filterId}
-        onChange={(e) => setFilterId(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Name"
-        value={filterName}
-        onChange={(e) => setFilterName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Email"
-        value={filterEmail}
-        onChange={(e) => setFilterEmail(e.target.value)}
+        placeholder="Filter by ID, Name, or Email"
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
       />
 
       <table>
