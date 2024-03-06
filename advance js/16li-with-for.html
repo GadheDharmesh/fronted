@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr = [
+        { name: "Harshit", age: 12, course: "wd" },
+        { name: "Abhay", age: 22, course: "wd" },
+        { name: "Vishakha", age: 23, course: "wd" },
+      ];
+
+      document.write(
+
+      `<table border="1" style="background:red"
+      >
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>cours</th>
+                </tr>
+        </table>
+
+        `
+
+      )
+    
+      arr.map((v,i)=>{
+        document.write(
+
+        `<table border="1">
+           
+             <tr>
+                <td>${v.name}</td>
+                <td>${v.age}</td>
+                <td>${v.course}</td>
+                </tr>
+            </table>`
+
+        )
+      })
+      var x = 10;
+      document.write(`<b><u>${x}</u></b>`);
+
+      //     for(i=0;i<arr.length;i++)
+      //     {
+      //         console.log(arr[i].age)
+      //     }
+
+      // for(i=0;i<5;i++)
+      // {
+      //     document.write("<li>sdfkj</li>")
+      // }
+    </script>
+  </body>
+</html>

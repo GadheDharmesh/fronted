@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Emotions (emotion)
+        {
+            console.log(emotion)
+        }
+
+        const PakkaPromise = new Promise(function(WillCall,AyaHiNahiCALL){
+
+            calling =1;
+            if(calling)
+            {
+                WillCall("Hello GF...!");
+            }
+
+            else 
+            {
+                AyaHiNahiCALL("Bhad me ja....!")
+            }
+
+        })
+        PakkaPromise.then(
+            // function(res){console.log(res)},
+            // function(err){console.log(err)}
+
+            function(Khushi){Emotions(Khushi)},
+            function(Galiya){Emotions(Galiya)}
+        )
+
+    </script>
+    
+</body>
+</html>

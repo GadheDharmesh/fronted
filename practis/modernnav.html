@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+        }
+        body::before{
+            content: "";
+            inset: 40% -60% 0 -60%;
+            opacity: .3;
+            pointer-events: none;
+
+        }
+        nav{
+            position: relative;
+            z-index: 1;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+        nav.before .active-element{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="active">
+                <button>home</button>
+            </li>
+            <li>
+                <button>blog</button>
+            </li>
+            <li>
+                <button>service</button>
+            </li>
+            <li>
+                <button>contact</button>
+            </li>
+            <li>
+                <button>about</button>
+            </li>
+        
+        </ul>
+    </nav>
+</body>
+</html>

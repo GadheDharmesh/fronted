@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Promise==> built in class 
+
+        const PromiseMe = new Promise(function(res,err){
+
+            if(1==1)
+            {
+                return (res("Connected...!"))
+            }
+
+            else 
+            {
+                return (err("404 page..!"))
+            }
+
+        })
+
+        PromiseMe
+        .then(
+            function(r){console.log(r)},
+            function(e){console.log(e)}
+            )
+
+
+
+    </script>
+    
+</body>
+</html>

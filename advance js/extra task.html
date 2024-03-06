@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" onblur="go(this,'hello1')"><span style="display: none;" id="hello1">text reqired</span>
+    <br>
+    <input type="number" id="no" onblur="go(this,'hello2')"><span style="display: none;" id="hello2 ">no. reqired</span>
+    <br>
+    <input type="email" id="mail" onblur="go(this,'hello3')"><span style="display: none;" id="hello3">e mail reduired</span>
+
+    <script>
+        
+        function go(inp,spankiid)
+        {
+            if(inp.value=="")
+            {
+                document.getElementById(spankiid).style.display="block"
+            }
+            else
+            {
+                document.getElementById(spankiid).style.display="none"
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const Students = {
+            fullname : function(){
+                return this.fname + " " + this.lname
+            }
+        }
+
+        const Student1 = {
+            fname:"Gaurav",
+            lname:"Nagar"
+        }
+
+        const Student2 = {
+            fname:"Nakum"
+        }
+
+        const Student3 = {
+            fname:"Harsh"
+        }
+
+    const st1 =  Students.fullname.bind(Student1);
+    console.log(st1())
+    </script>
+    
+</body>
+</html>
