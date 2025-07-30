@@ -5,56 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rotation order</title>
-    <style>*{margin: 0%;padding: 0%;box-sizing: border-box;}
-        div
-        {
-            height: 650px;width: 100%;
-            background: linear-gradient(90deg,rgb(133, 43, 43),rgb(121, 24, 121));
-          
-          
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .rg
-        {
-            background:rgb(243, 247, 4);
-            height: 200px;width: 150px;
-            margin:  auto;
-             transform: translate(40px,200px); 
-             position: relative;
-             overflow: hidden;     
-              display: flex;
-              justify-content: center;
-              align-items: center;
 
+        div {
+            height: 650px;
+            width: 100%;
+            background: linear-gradient(90deg, rgb(133, 43, 43), rgb(121, 24, 121));
         }
-       
-        .rg::after
+
+        .rg {
+            background: rgb(243, 247, 4);
+            transform: translateY(100px);
+            margin-left:calc((100%-150px)px) ;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 150px;
+            clip-path: content;
+            border-radius: 10% 0 10% 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            z-index: 2; /* Ensure content stays above rotating background */
+        }
+
+        /* Rotating background (blue and red gradient) */
+        .rg::before {
+            content: " ";
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(90deg, blue, red);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            z-index: 0; /* Place it below the content */
+        }
+        
+            .rg::after
         {
             content: "";
            height: 190px;width: 140px;
-           background: black;
+           background: red;
+
            position: absolute; 
-          
+            border-radius: 10% 0 10% 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(0deg);
+          z-index: 1;  }
+        
+        /*.rg::after {*/
+        /*    content: " ";*/
+        /*    height: 190px;*/
+        /*    width: 140px;*/
+        /*    background: black*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    transform: translate(-50%, -50%) rotate(0deg);*/
+        /*    transition: transform 2s;*/
+        /*    z-index: 1;  */
+        /*}*/
+
+        .rg:hover::before {
+            animation: rotate 3s infinite linear;
         }
 
-         .rg::before 
-        {
-            content: " ";
-            height: 400px;width: 400px;
-            background:linear-gradient(red,blue);
-            position: absolute;
-             bottom: 0%; 
-            right: 0%;  
-            transform: rotate(0deg);
-            transition: 2s; 
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
 
-         .rg:hover::before 
-        {
-            transform: rotate(360deg);
-        } 
+        /* Inner content */
+        .rg span {
+               position: relative;
+            z-index: 2; /* Make sure content stays above rotating background */
+        }
     </style>
 </head>
 <body>
-    <div> <DIV class="rg"></DIV></div>
+    <div>
+        <div class="rg">
+            <span>Schedual</span>
+             <span>Appointment</span>
+        </div>
+    </div>
 </body>
 </html>
